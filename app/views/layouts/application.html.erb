@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gamedays</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+  <div class="title-left">
+  <h1 class="title"><%= link_to "GameDays", games_path, class: "link-text"%></h1>
+  <p class="description">Remember the days we were playing video games.</p>
+  </div>
+  <h2 class="register-link"><%= link_to 'Register Game', new_game_path, class: "link-text register" %></h2>
+  </header>
+  <main>
+  <%= yield %>
+  </main>
+  <footer>
+  <h2 class="back-to-home"><%= link_to 'Back to Home', games_path, class: "link-text" %></h2>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<div class="side-bar">
+<%= render partial: 'sidebar' %>
+</div>
+<div class="main-content">
+<% @titles.each do |title| %>
+<div class="game-info">
+ <h4>Title:<%= title.title%></h4>
+ <h4>Maker:<%= title.maker%></h4>
+ <h4>Series:<%= title.series%></h4>
+ <h4>Hard:<%= title.hard%></h4>
+ <%= link_to "Show-Play-History", game_path(title.id), class: 'link-text show' %>
+</div>
+<% end %>
+</div>

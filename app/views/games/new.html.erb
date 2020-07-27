@@ -1,0 +1,28 @@
+<div class="side-bar">
+<%= render partial: 'sidebar' %>
+</div>
+<div class="main-content">
+<div class="register-form">
+<%= form_with(model: @game, class: "form", local: true) do |form| %>
+ <div class="form-content">
+ <h2>↓Register Yout Favorite Game↓</h2>
+ <label>
+ <%= form.text_field :title, class: "form-item", placeholder: "TITLE" %>
+ </label>
+ <label>
+ <%= form.text_field :series, class: "form-item", placeholder: "SERIES" %>
+ </label>
+ <label>
+ <%= form.select :year, (Time.zone.now.year - 100)..(Time.zone.now.year + 1),{ include_blank: '年を選択してください' }, class: "form-item select" %>
+ </label>
+ <label>
+ <%= form.select :maker, ["任天堂", "CAPCON", "SEGA", "CONAMI", "BANDAI"],{ include_blank: 'メーカーを選択してください' }, class: "form-item select" %>
+ </label>
+ <label>
+ <%= form.select :hard, ["Switch", "WiiU", "3DS", "GameCube", "DS", "GBA", "Gameboy", "Nintendo64", "Xbox360", "PC", "PSP"],{ include_blank: 'ハードを選択してください' }, class: "form-item select" %>
+ </label>
+ <%= form.submit :SEND, class: "submit-button" %>
+ </div>
+<% end %>
+</div>
+</div>

@@ -1,0 +1,26 @@
+<div class="side-bar">
+<%= render partial: 'sidebar' %>
+</div>
+
+<div class="main-content">
+<h2 class="game-title"><%= @game.title %></h2>
+<div class="histories">
+<% @histories.each do |history| %>
+ <%= link_to  l(history.date).to_date, game_history_path(game_id: history.game.id, id: history.id) %>
+<% end %>
+</div>
+
+<div class="hisotry-post">
+ <%= form_with(model: [@game, @history], local: true) do |form| %>
+ <div class="form-content">
+ <div class="date">
+ <%= form.date_field :date,  class: 'date-select' %>
+ </div>
+ <%= form.text_area :text, placeholder: "How was your playing today?",  class: 'history-text' %>
+ <%= form.label :image, class: 'image-input' %>
+ <%= form.file_field :image, class: 'hidden'  %>
+ <%= form.submit "SAVE" ,class: 'submit-button'%>
+ </div>
+ <% end %>
+</div>
+</div>
