@@ -1,20 +1,8 @@
 <div class="side-bar">
-<%= render partial: 'sidebar' %>
+<%= render partial: '/games/sidebar' %>
 </div>
 
 <div class="main-content">
-<h2 class="game-title"><%= @game.title %></h2>
-<div class="histories">
-<h2>Play Report</h2>
-<ul class="history-list">
-<li>
-<% @histories.each do |history| %>
- <%= link_to  l(history.date).to_date, game_history_path(game_id: history.game.id, id: history.id), class: 'history-data' %>
-<% end %>
-</li>
-</ul>
-</div>
-
 <div class="hisotry-post">
  <%= form_with(model: [@game, @history], local: true) do |form| %>
  <div class="form-content">
@@ -27,5 +15,6 @@
  <%= form.submit "SAVE" ,class: 'submit-button'%>
  </div>
  <% end %>
+</div>
 </div>
 </div>

@@ -6,12 +6,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: Verdana;
+  word-break: keep-all;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  height: 15vh;
   margin: 0 auto;
 }
 
@@ -26,16 +28,16 @@ header {
 
 main {
   display: flex;
-  height: 90vh;
+  height: 75vh;
 }
 
 .main-content {
   background-color: lightgray;
-  width: calc(100% - 300px);
+  width: calc(100vw - 200px);
 }
 
 .side-bar {
-  width: 300px;
+  width: 200px;
   background-color: black;
 }
 
@@ -50,21 +52,25 @@ main {
   font-size: 18px;
   color: white;
   text-decoration: none;
-  margin: 10px 0 0 0;
+  margin: 10px 0 10px 0;
 }
 
 .register-link {
   float: right;
   padding: 2vw;
+  padding: 0;
 }
 
 .index-message {
-  margin: 0 60% 0 20%;
-  width: 70%;
+  width: 80%;
+  text-align:center;
+  margin: 0 auto;
 }
 
 .years{
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .years h3 {
@@ -134,10 +140,20 @@ main {
   text-align: center;
 }
 
+footer {
+ height: 10vh;
+ clear: both;
+ background-color: gray;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
 .back-to-home {
+  display: block;
   text-align: center;
-  margin: 0 auto;
-  padding: 3vh 0 0 1vh;
+  margin: 0 auto; 
+  color: white;
 }
 
 .game-info {
@@ -160,6 +176,19 @@ main {
   margin-left: 15vw;
 }
 
+.histories {
+  margin-left: 15vw;
+}
+
+.history-data {
+  text-decoration: none;
+  color: black;
+}
+
+.history-list {
+  list-style: none;
+}
+
 .history-text {
   width: 50vw;
   height: 20vh;
@@ -180,6 +209,10 @@ main {
   font-size: 12px;
 }
 
+.history {
+  margin-left: 10vw;
+}
+
 .image-input {
   margin: 2vh;
   width: 30vw;
@@ -191,9 +224,43 @@ main {
   font-weight: bold;
 }
 
-footer {
- height: 10vh;
- clear: both;
+
+@media( max-width: 960px ) {
+  .description {
+    display: none;
+  }
+
+  .register-link {
+    padding-top: 1vh;
+  }
+
+
 }
+
+@media( max-width: 415px ) {
+  header {
+    display: block;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .register-link {
+    float: none;
+    text-align: center;
+  }
+  
+  .side-bar {
+    display: none;
+  }
+
+  .main-content {
+    width: 100vw;
+  }
+
+  
+}
+
 
 

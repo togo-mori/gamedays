@@ -9,6 +9,25 @@ class HistoriesController < ApplicationController
     @history = History.find(params[:id])
   end
 
+  def edit
+    @games = Game.all
+    @history = History.find(params[:id])
+    @game = @history.game 
+  end
+
+  def update 
+    @history = History.find(params[:id])
+    @game = @history.game
+    @history.update(history_params)
+    redirect_to "/games/#{@history.game.id}/histories/#{@history.id}"
+  end
+
+  def destroy
+    @history = History.find(params[:id])
+    @game = @history.game
+    @history.destroy
+    redirect_to "/games/#{@history.game.id}"
+  end
   private 
   
   def history_params

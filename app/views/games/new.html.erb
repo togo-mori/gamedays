@@ -13,7 +13,7 @@
  <%= form.text_field :series, class: "form-item", placeholder: "SERIES" %>
  </label>
  <label>
- <%= form.select :year, (Time.zone.now.year - 100)..(Time.zone.now.year + 1),{ include_blank: '年を選択してください' }, class: "form-item select" %>
+ <%= form.select :year, (Time.zone.now.year - 20)..(Time.zone.now.year + 1),{ include_blank: '年を選択してください' }, class: "form-item select" %>
  </label>
  <label>
  <%= form.select :maker, ["任天堂", "CAPCON", "SEGA", "CONAMI", "BANDAI"],{ include_blank: 'メーカーを選択してください' }, class: "form-item select" %>

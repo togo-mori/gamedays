@@ -3,5 +3,14 @@
 </div>
 
 <div class="main-content">
-<h2 class="date"><%= @history.date %></h2>
+<div class="history">
+<h2><%= l(@history.date).to_date %></h2>
+<p class=""><%= @history.text %></p>
+<%= image_tag @history.image.variant(resize:'500x500'), class: 'message-image' if @history.image.attached? %>
+<p>
+<%= link_to 'Edit', edit_game_history_path(game_id: @history.game.id, id: @history.id), class: 'link-text'%>
+<%= link_to 'Delete', game_history_path(game_id: @history.game.id, id: @history.id), method: :delete, class: 'link-text'%>
+</p>
 </div>
+</div>
+

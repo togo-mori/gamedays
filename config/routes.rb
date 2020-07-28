@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "games#index"
   resources :games do 
-    resources :histories, only: [:create, :show]
+    resources :histories, only: [:create, :show, :update, :edit, :destroy]
     collection do 
       get 'year'
     end

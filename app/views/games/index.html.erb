@@ -2,7 +2,7 @@
 <%= render partial: 'sidebar' %>
 </div>
 <div class="main-content">
-<h2 class="index-message">Choose the Year You wanna be back!</h2>
+<h2 class="index-message">Year Select</h2>
 <div class="years">
 <% @games.order(year: "DESC").pluck(:year).uniq.each do |year| %>
  <h3>

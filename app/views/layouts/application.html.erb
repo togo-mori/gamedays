@@ -4,7 +4,7 @@
     <title>Gamedays</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -21,7 +21,7 @@
   <%= yield %>
   </main>
   <footer>
-  <h2 class="back-to-home"><%= link_to 'Back to Home', games_path, class: "link-text" %></h2>
+  <h2><%= link_to 'Back to Home', games_path, class: "link-text back-to-home" %></h2>
   </footer>
   </body>
 </html>
