@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   root to: "games#index"
   resources :games do 
     resources :histories, only: [:create, :show, :update, :edit, :destroy]
