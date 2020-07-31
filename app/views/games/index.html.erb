@@ -1,3 +1,6 @@
+<div class="side-bar">
+<%= render partial: 'sidebar' %>
+</div>
 <div class="side-years">
 <h3>Years</h3>
 <% @games.order(year: "DESC").pluck(:year).uniq.each do |year| %>
