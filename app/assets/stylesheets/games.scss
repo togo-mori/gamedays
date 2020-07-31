@@ -218,6 +218,23 @@ footer {
        0px -2px 1px white; 
 }
 
+.delete {
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  color: navy;
+   text-shadow: 
+       2px  2px 1px white,
+      -2px  2px 1px white,
+       2px -2px 1px white,
+      -2px -2px 1px white,
+       2px  0px 1px white,
+       0px  2px 1px white,
+      -2px  0px 1px white,
+       0px -2px 1px white; 
+}
+
 .show:hover {
   font-size: 30px;
 }

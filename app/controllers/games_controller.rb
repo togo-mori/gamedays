@@ -20,6 +20,13 @@ class GamesController < ApplicationController
     @histories = @game.histories
   end
 
+  def destroy 
+    game = Game.find(params[:id])
+    game.destroy
+    redirect_to "/games"
+  end
+
+
   def year
     @games = Game.all
     @titles = Game.where(year: params[:year])

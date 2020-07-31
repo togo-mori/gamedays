@@ -9,6 +9,7 @@
  <h4>Series:<%= title.series%></h4>
  <h4>Hard:<%= title.hard%></h4>
  <%= link_to "Show-Play-History", game_path(title.id), class: 'link-text show' %>
+ <%= link_to "Delete-Data", game_path(title.id), method: :delete, class: 'link-text delete' %>
 </div>
 <% end %>
 </div>
