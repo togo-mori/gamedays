@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   end
 
   before_action :mylogger_test
-
   private
 
   def mylogger_test
