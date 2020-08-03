@@ -11,16 +11,17 @@
 
   <body>
   <header>
-  <div class="title-left">
-  <h1 class="title"><%= link_to "GameDays", games_path, class: "link-text"%></h1>
-  </div>
-  <h2 class="register-link"><%= link_to 'Register Game', new_game_path, class: "link-text register" %></h2>
+  
+  <h1><%= link_to "GameDays", games_path, class: "title"%></h1>
+  <h1><%= link_to current_user.name,  edit_user_path(current_user), class: 'user-name'  %></h1>
+  
+  
   </header>
   <main>
   <%= yield %>
   </main>
   <footer>
-  <h2><%= link_to 'Back to Home', games_path, class: "link-text back-to-home" %></h2>
+  <h2><%= link_to 'Back to Home', games_path, class: "back-to-home" %></h2>
   </footer>
   </body>
 </html>

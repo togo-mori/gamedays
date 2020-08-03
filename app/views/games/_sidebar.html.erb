@@ -1,5 +1,6 @@
+<h3 class="register-link"><%= link_to 'Register Game', new_game_path, class: "register" %></h3>
 <div class="side-years">
-<h3>Years</h3>
+<h2>Years</h2>
 <% @games.order(year: "DESC").pluck(:year).uniq.each do |year| %>
  <%= link_to year, year_games_path(year: year), controller: "games", action: "year", class: "side-year" %>
 <%end%>

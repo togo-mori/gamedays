@@ -18,14 +18,23 @@ header {
   background-color: white;
 }
 
-.title {
-  padding-right: 20vw;
+a {
+  text-decoration: none;
 }
 
-.link-text {
-  text-decoration: none;
+.title {
+  padding-right: 20vw;
   color: black;
 }
+
+.user-name {
+  color: black;
+}
+
+.title:hover, .user-name:hover {
+  color: #E82544;
+}
+
 
 main {
   display: flex;
@@ -46,22 +55,36 @@ main {
   overflow: scroll;
 }
 
-.side-years h3 {
+.register {
+  color: white;
+  padding: 2vh;
+  border-radius: 2px;
+}
+
+.register:hover, .side-year:hover{
+  background-color: #192D42;
+}
+
+.side-years h2 {
   color: white;
   text-align: center;
 }
 
 .side-year {
   display: block;
+  width: 50%;
   text-align: center;
   font-size: 18px;
+  font-weight: bold;
   color: white;
   text-decoration: none;
-  margin: 10px 0 10px 0;
+  margin: 0 auto ;
+  border-radius: 2px;
+  padding: 1vh;
 }
 
 .register-link {
-  float: right;
+  text-align: center;
   padding: 0;
   padding-top: 1vh;
 }
@@ -71,14 +94,14 @@ main {
   text-align:center;
   margin: 1vh auto 0;
   text-shadow: 
-       2px  2px 1px #D13F04,
-      -2px  2px 1px #D13F04,
-       2px -2px 1px #D13F04,
-      -2px -2px 1px #D13F04,
-       2px  0px 1px #D13F04,
-       0px  2px 1px #D13F04,
-      -2px  0px 1px #D13F04,
-       0px -2px 1px #D13F04;  
+       2px  2px 1px #FFFFFF,
+      -2px  2px 1px #FFFFFF,
+       2px -2px 1px #FFFFFF,
+      -2px -2px 1px #FFFFFF,
+       2px  0px 1px #FFFFFF,
+       0px  2px 1px #FFFFFF,
+      -2px  0px 1px #FFFFFF,
+       0px -2px 1px #FFFFFF;  
 }
 
 .years{
@@ -107,9 +130,6 @@ main {
   line-height: 100px
 }
 
-.register {
-  color: #2940D6;
-}
 
 .register-form {
   margin: 0 auto;
@@ -160,6 +180,7 @@ main {
   margin: 10px auto 10px;
   background-color: navy;
   font-size: 24px;
+  font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
   color: white;
@@ -368,7 +389,7 @@ footer {
   overflow: scroll;
 }
 
-.user-registration, .user-session {
+.user-registration, .user-session, .account-page {
   display: flex;
   margin: 5vh auto;
   width: 60vw;
@@ -407,16 +428,24 @@ footer {
   width: 90%;
   height: 5vh;
   font-size: 24px;
+  font-weight: bold;
   color: white;
   background-color: navy;
   border: 2px solid #384047;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn:hover {
   background-color: #38B3FF;
 }
+
+.account-page {
+  color:white;
+}
+
+
 
 
 
