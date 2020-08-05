@@ -13,7 +13,11 @@
   <header>
   
   <h1><%= link_to "GameDays", games_path, class: "title"%></h1>
+  <% if user_signed_in? %>
   <h1><%= link_to current_user.name,  edit_user_path(current_user), class: 'user-name'  %></h1>
+  <% else %>
+  <h1><%= link_to 'Sign In', new_user_session_path, class: 'user-name'%></h1>
+  <% end %>
   
   
   </header>

@@ -9,7 +9,9 @@
  <h4>Series:<%= title.series%></h4>
  <h4>Hard:<%= title.hard%></h4>
  <%= link_to "Show-Play-History", game_path(title.id), class: 'show' %>
+ <% if user_signed_in? && current_user.id == 1 %>
  <%= link_to "Delete-Data", game_path(title.id), method: :delete,data: { confirm: '削除しますか？' }, class: 'delete' %>
+ <% end %>
 </div>
 <% end %>
 </div>

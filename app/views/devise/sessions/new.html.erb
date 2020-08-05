@@ -2,6 +2,7 @@
   <div class='user-session'>
     <div class="user-session-left">
      <h1>Log in</h1>
+     <%= link_to 'Sign Up', new_user_registration_path, class: 'btn'%>
     </div>
     <div class="user-session-right">
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>

@@ -1,4 +1,6 @@
 class GamesController < ApplicationController
+  before_action :move_to_sign_in   
+
   def index
     @games = Game.all
   end
@@ -35,7 +37,11 @@ class GamesController < ApplicationController
   private
   
   def game_params 
-     params.require(:game).permit(:title,:maker,:series,:hard,:year)
+     params.require(:game).permit(:title,:maker,:series,:hard,:year).merge(user_id: current_user.id)
+  end
+
+  def move_to_sign_in
+    redirect_to new_user_session_path unless user_signed_in?
   end
   
 end

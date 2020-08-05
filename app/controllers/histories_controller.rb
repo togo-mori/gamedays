@@ -31,6 +31,6 @@ class HistoriesController < ApplicationController
   private 
   
   def history_params
-   params.require(:history).permit(:text, :image, :date).merge(game_id: params[:game_id])
+   params.require(:history).permit(:text, :image, :date).merge(game_id: params[:game_id], user_id: current_user.id)
   end
 end

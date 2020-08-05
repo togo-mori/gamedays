@@ -392,13 +392,15 @@ footer {
 .user-registration, .user-session, .account-page {
   display: flex;
   margin: 5vh auto;
-  width: 60vw;
+  width: fit-content;
+  padding: 2vh 5vw;
   justify-content: space-around;
   border: 2px solid #384047; 
 }
 
 .user-registration-left, .user-session-left h1 {
   padding-top: 2vh;
+  text-align: center;
   text-shadow: 
        2px  2px 1px #FFFFFF,
       -2px  2px 1px #FFFFFF,
@@ -426,7 +428,8 @@ footer {
 
 .btn {
   width: 90%;
-  height: 5vh;
+  height: 6vh;
+  padding: 1vh 1vw;
   font-size: 24px;
   font-weight: bold;
   color: white;

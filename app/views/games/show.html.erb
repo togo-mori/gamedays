@@ -9,7 +9,8 @@
 <ul class="history-list">
 <li>
 <% @histories.each do |history| %>
- <%= link_to  l(history.date).to_date, game_history_path(game_id: history.game.id, id: history.id), class: 'history-data' %>
+ <p><%= link_to  l(history.date).to_date, game_history_path(game_id: history.game.id, id: history.id), class: 'history-data' %>
+ <%= history.user.name %></p>
 <% end %>
 </li>
 </ul>
