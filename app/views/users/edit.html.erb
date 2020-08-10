@@ -2,7 +2,7 @@
 <div class='account-page'>
     <div class='account-page-left'>
       <h2>Edit Account</h2>
-      <%= link_to  "Log-out", destroy_user_session_path, method: :delete, class: 'btn' %>
+      <%= link_to  "Log out", destroy_user_session_path, method: :delete, class: 'btn' %>
     </div>
     <div class='account-page-right'>
       <%= form_with model: current_user, local: true do |f|%>

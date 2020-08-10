@@ -7,18 +7,23 @@
  <div class="form-content">
  <h2>↓Register Yout Favorite Game↓</h2>
  <label>
+ <h2>Title</h2>
  <%= form.text_field :title, class: "form-item", placeholder: "TITLE" %>
  </label>
  <label>
+ <h2>Series</h2>
  <%= form.text_field :series, class: "form-item", placeholder: "SERIES" %>
  </label>
  <label>
+ <h2>Year</h2>
  <%= form.select :year, (Time.zone.now.year - 20)..(Time.zone.now.year + 1),{ include_blank: '年を選択してください' }, class: "form-item select" %>
  </label>
  <label>
+ <h2>Maker</h2>
  <%= form.select :maker, ["任天堂", "CAPCON", "SEGA", "CONAMI", "BANDAI"],{ include_blank: 'メーカーを選択してください' }, class: "form-item select" %>
  </label>
  <label>
+ <h2>Hard</h2> 
  <%= form.select :hard, ["Switch", "WiiU", "3DS", "GameCube", "DS", "GBA", "Gameboy", "Nintendo64", "Xbox360", "PC", "PSP"],{ include_blank: 'ハードを選択してください' }, class: "form-item select" %>
  </label>
  <%= form.submit :SEND, class: "submit-button" %>
