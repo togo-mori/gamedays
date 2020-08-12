@@ -20,10 +20,10 @@
  <%= form_with(model: [@game, @history], local: true) do |form| %>
  <div class="form-content">
  <div class="date">
- <%= form.date_field :date,  class: 'date-select' %>
+ <%= form.date_field :date,  class: 'date-select', max: "9999-12-31" %>
  </div>
  <%= form.text_area :text, placeholder: "How was your playing today?",  class: 'history-text' %>
- <%= form.label :image, class: 'image-input' %>
+ <%= form.label :image, id: 'image-input' %>
  <%= form.file_field :image, class: 'hidden'  %>
  <%= form.submit "SAVE" ,class: 'submit-button'%>
  </div>

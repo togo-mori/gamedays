@@ -83,11 +83,34 @@ RSpec.describe "Games", type: :system do
   end
 
   context "投稿に成功" do
+    it "Gameの投稿に成功するとトップページに遷移する" do
+      @user = FactoryBot.create(:user)
+      sign_in(@user)
+      register_game
+      expect(current_path).to eq root_path
+    end
     
   end
   
+  context "ゲームデータを削除" do
+    it "データを削除" do
+      @user = FactoryBot.create(:user, id: 1)
+      sign_in(@user)
+      register_game
+      @game = Game.where( 'id >= ?', rand(Game.count) + 1 ).first
+      click_on "#{@game.year}", match: :first
+      page.dismiss_confirm("削除しますか？") do
+        click_on "Delete-Data"
+      end
+      expect {
+        page.accept_confirm do 
+         click_on "Delete-Data"
+        end
+        expect(current_path).to eq games_path  
+      }.to change { Game.count }.by(-1)
+    end
+    
+  end
   
-  
- 
   
 end
