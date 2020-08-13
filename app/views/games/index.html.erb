@@ -11,11 +11,7 @@
 <% end %>
 <h2 class="index-message">Year Select</h2>
 <div class="years">
-<% @games.order(year: "DESC").pluck(:year).uniq.each do |year| %>
- <h3>
- <%= link_to year, year_games_path(year: year), controller: "games", action: "year", class: "year" %>
- </h3>
-<%end %>
+<h3 class="year"><%= years(@games) %></h3>
 </div>
 </div>
  

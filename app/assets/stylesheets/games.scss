@@ -73,6 +73,7 @@ main {
 .side-year {
   display: block;
   width: 50%;
+  height: 2vh;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -81,6 +82,11 @@ main {
   margin: 0 auto ;
   border-radius: 2px;
   padding: 1vh;
+}
+
+.side-year .year {
+ height: 2vh;
+ line-height: 2vh;
 }
 
 .register-link {
@@ -139,16 +145,16 @@ main {
   text-align: center;
 }
 
-.years h3:hover {
-  background-color: #38B3FF;
-}
-
 .year{
   display: block;
   color: white;
   text-decoration: none;
   line-height: 100px
 }
+.years h3:hover {
+  background-color: #38B3FF;
+}
+
 
 
 .register-form {
