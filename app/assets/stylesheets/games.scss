@@ -89,6 +89,26 @@ main {
   padding-top: 1vh;
 }
 
+.notice {
+  width: 80%;
+  border: 5px solid #384047;
+  height: 15vh;
+  margin: 1vh auto 0;
+  text-shadow: 
+       2px  2px 1px #FFFFFF,
+      -2px  2px 1px #FFFFFF,
+       2px -2px 1px #FFFFFF,
+      -2px -2px 1px #FFFFFF,
+       2px  0px 1px #FFFFFF,
+       0px  2px 1px #FFFFFF,
+      -2px  0px 1px #FFFFFF,
+       0px -2px 1px #FFFFFF;  
+}
+
+.notice h2 {
+  margin: 2vh 10%;
+}
+
 .index-message {
   width: 80%;
   text-align:center;

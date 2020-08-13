@@ -14,7 +14,7 @@ class GamesController < ApplicationController
     @games = Game.all
     @game = Game.new(game_params)
     if @game.save
-      redirect_to root_path
+      redirect_to root_path, notice: "Game Registered"
     else
       redirect_to new_game_path
     end
@@ -30,7 +30,7 @@ class GamesController < ApplicationController
   def destroy 
     game = Game.find(params[:id])
     game.destroy
-    redirect_to "/games"
+    redirect_to "/games", notice: "Game Deleted"
   end
 
 

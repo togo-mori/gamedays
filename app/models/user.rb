@@ -7,5 +7,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: {case_sensitive: true}
   has_many :histories
   has_many :games
-  
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'must be composed with numbers and characters' 
 end

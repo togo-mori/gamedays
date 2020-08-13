@@ -3,6 +3,12 @@
 </div>
 
 <div class="main-content">
+<% if flash[:notice] %>
+<div class="notice">
+  <h2>-Notice-</h2>
+  <h2><%= flash[:notice] %></h2>
+</div>
+<% end %>
 <h2 class="index-message">Year Select</h2>
 <div class="years">
 <% @games.order(year: "DESC").pluck(:year).uniq.each do |year| %>
