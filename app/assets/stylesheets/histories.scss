@@ -1,3 +1,113 @@
 // Place all the styles related to the histories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.histories {
+  margin-left: 15vw;
+  text-shadow: 
+       2px  2px 1px white,
+      -2px  2px 1px white,
+       2px -2px 1px white,
+      -2px -2px 1px white,
+       2px  0px 1px white,
+       0px  2px 1px white,
+      -2px  0px 1px white,
+       0px -2px 1px white; 
+}
+
+.history-data {
+  text-decoration: none;
+  color: black;
+}
+
+.history-data:hover {
+  font-size: 18px;
+}
+
+.history-list {
+  list-style: none;
+}
+
+.history-text {
+  width: 50vw;
+  height: 20vh;
+  border: 2px solid #384047;
+}
+
+.hidden {
+  display: none;
+}
+
+.date{
+  display:flex;
+  width: 10vw;
+  justify-content: space-around;
+  margin: 2vh;
+}
+
+.date-select {
+  font-size: 12px;
+  width: 100%;
+  border: 2px solid #384047;
+}
+
+
+#image-input {
+  margin: 2vh;
+  width: 60%;
+  height: 10vh;
+  display: block;
+  text-align: center;
+  line-height: 10vh;
+  background-color: violet;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid #384047;
+}
+
+.history {
+  margin-left: 10vw;
+  width: 70%;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-header p {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hisotry-date {
+  text-shadow: 
+       2px  2px 1px white,
+      -2px  2px 1px white,
+       2px -2px 1px white,
+      -2px -2px 1px white,
+       2px  0px 1px white,
+       0px  2px 1px white,
+      -2px  0px 1px white,
+       0px -2px 1px white; 
+}
+
+.history-controll {
+  color: white;
+  display: inline-block;
+  border: 2px solid #384047;
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 5%;
+}
+
+.history-controll:hover {
+  background-color: #38B3FF;
+}
+
+.history-content {
+  color: white;
+}

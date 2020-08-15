@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+ <% if @history.liked_by?(current_user) %>
+  <div class="likes">
+  <%=link_to game_history_like_path(game_id: @history.game.id, history_id: @history.id, id: history.likes[0].id), method: :delete, remote: true do %>
+  <i class="fas fa-heart unlike-btn"></i>
+  <% end %>
+  <p class="like-count"><%= "#{@history.likes.count} likes" %></p>
+  </div>
+ <% else %>
+  <div class="likes">
+  <%=link_to game_history_likes_path(game_id: @history.game.id, history_id: @history.id), method: :post, remote: true  do %>
+  <i class="fas fa-heart like-btn"></i>
+  <% end %>
+  <p class="like-count"><%= "#{@history.likes.count} likes" %></p>
+  </div>
+ <% end %>
+ <% else %>
+    <p><%= "#{@history.likes.count} likes" %></p>
+<% end %>

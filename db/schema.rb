@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_05_013841) do
+ActiveRecord::Schema.define(version: 2020_08_13_233946) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -49,8 +49,20 @@ ActiveRecord::Schema.define(version: 2020_08_05_013841) do
     t.integer "user_id"
     t.datetime "date"
     t.text "text"
+    t.integer "likes_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "game_id", null: false
+    t.bigint "history_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["game_id"], name: "index_likes_on_game_id"
+    t.index ["history_id"], name: "index_likes_on_history_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -67,4 +79,7 @@ ActiveRecord::Schema.define(version: 2020_08_05_013841) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "likes", "games"
+  add_foreign_key "likes", "histories"
+  add_foreign_key "likes", "users"
 end

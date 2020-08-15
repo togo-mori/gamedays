@@ -5,6 +5,7 @@ class CreateHistories < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.datetime :date
       t.text :text
+      t.integer :likes_count
       t.timestamps
     end
   end

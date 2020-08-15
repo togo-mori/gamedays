@@ -7,6 +7,7 @@ class HistoriesController < ApplicationController
   def show 
     @games = Game.all
     @history = History.find(params[:id])
+    Like.new
   end
 
   def edit
@@ -28,9 +29,10 @@ class HistoriesController < ApplicationController
     @history.destroy
     redirect_to "/games/#{@history.game.id}"
   end
+      
   private 
   
   def history_params
-   params.require(:history).permit(:text, :image, :date).merge(game_id: params[:game_id], user_id: current_user.id)
+    params.require(:history).permit(:text, :image, :date).merge(game_id: params[:game_id], user_id: current_user.id)
   end
 end

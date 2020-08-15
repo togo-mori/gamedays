@@ -1,3 +1,68 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.users {
+  background-color: #4885C2;
+  width: 100vw;
+  border: 1px solid #384047;
+  overflow: scroll;
+}
+
+.user-registration, .user-session, .account-page {
+  display: flex;
+  margin: 5vh auto;
+  width: fit-content;
+  padding: 2vh 5vw;
+  justify-content: space-around;
+  border: 2px solid #384047; 
+}
+
+.user-registration-left, .user-session-left h1 {
+  padding-top: 2vh;
+  text-align: center;
+  text-shadow: 
+       2px  2px 1px #FFFFFF,
+      -2px  2px 1px #FFFFFF,
+       2px -2px 1px #FFFFFF,
+      -2px -2px 1px #FFFFFF,
+       2px  0px 1px #FFFFFF,
+       0px  2px 1px #FFFFFF,
+      -2px  0px 1px #FFFFFF,
+       0px -2px 1px #FFFFFF; 
+}
+
+.field, .actions {
+  margin: 5vh;
+  width: 100%;
+  color: white;
+}
+
+
+.field-input input {
+  width: 90%;
+  height: 3vh;
+  border-radius: 5px;
+  border: 2px solid #384047;
+}
+
+.btn {
+  width: 90%;
+  height: 6vh;
+  padding: 1vh 1vw;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: navy;
+  border: 2px solid #384047;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #38B3FF;
+}
+
+.account-page {
+  color:white;
+}
